@@ -2,15 +2,15 @@
 
 ### Proposta do Sistema:
 
-O FerroMonitor é uma solução tecnológica desenvolvida para o setor de mobilidade urbana inteligente, focada no monitoramento em tempo real de redes ferroviárias. A proposta central do projeto consiste na integração de sensores IoT instalados tanto nos trilhos quanto nas locomotivas para a captura contínua de dados operacionais críticos. O sistema centraliza essas informações em um banco de dados para permitir o processamento imediato e a visualização dos ativos, garantindo uma gestão moderna e conectada da infraestrutura ferroviária.
+O FerroMonitor é um sistema feito para cuidar de ferrovias de um jeito inteligente e moderno. Ele usa sensores instalados nos trens e nos trilhos para coletar informações o tempo todo. Esses dados são enviados para um computador central, onde são organizados para que os gestores possam acompanhar tudo o que acontece no sistema ferroviário na hora.
 
 ### Objetivos do Projeto:
 
-O objetivo principal deste protótipo funcional é fornecer uma plataforma de apoio à tomada de decisão fundamentada em dados reais. O foco do projeto está distribuído em três pilares: otimização do desempenho, implementação de estratégias de manutenção preditiva e reforço da segurança operacional. Para isso, o sistema visa coletar variáveis de velocidade, localização geográfica, consumo de energia e detecção de falhas, transformando dados brutos em dashboards e relatórios analíticos que facilitam a gestão do tráfego e a prevenção de acidentes.
+O principal objetivo deste projeto é criar uma ferramenta que ajude a tomar decisões baseadas em fatos reais. O sistema foca em três pontos: melhorar a velocidade e o uso de energia, prever quando os equipamentos precisam de conserto e aumentar a segurança. Para isso, ele registra a velocidade, a localização e possíveis defeitos, transformando esses dados em gráficos e relatórios fáceis de entender.
 
 ### Equipe:
 
-O projeto é desenvolvido por uma equipe técnica comprometida com as boas práticas de programação e gestão de dados, composta por Lucas Lazzarotti, Matheus Guesser, Caio Marques e Luis Pedro Mathias.
+O projeto é desenvolvido por Lucas Lazzarotti, Matheus Guesser, Caio Marques e Luis Pedro Mathias.
 
 ### Funcionalidades Previstas:
 
