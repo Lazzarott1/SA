@@ -1,3 +1,5 @@
+## 1. Conceito de CRUD
+
 O CRUD é um conceito fundamental da programação utilizado para realizar as operações básicas em um banco de dados. A sigla CRUD representa as palavras Create, Read, Update e Delete, que significam criar, ler, atualizar e excluir dados. Essas quatro funções estão presentes em praticamente todos os sistemas modernos, como redes sociais, lojas virtuais, sistemas escolares, aplicativos e sites de cadastro.
 
 No desenvolvimento em PHP, o CRUD é muito utilizado juntamente com bancos de dados como o MySQL. O PHP funciona como a linguagem responsável pela lógica do sistema, enquanto o banco de dados armazena as informações. Dessa forma, o usuário interage com o sistema por meio de formulários e páginas web, o PHP recebe essas informações e executa comandos SQL para salvar, consultar, modificar ou excluir dados no banco.
@@ -16,7 +18,8 @@ Além do PHP e do MySQL, muitos sistemas CRUD utilizam HTML para criar formulár
 
 O CRUD é considerado a base do desenvolvimento back-end, pois praticamente todos os sistemas precisam armazenar e manipular informações. Aprender CRUD é essencial para qualquer programador que deseja trabalhar com desenvolvimento web, já que ele ensina conceitos importantes como banco de dados, formulários, lógica de programação, segurança e integração entre front-end e back-end.
 
-CRUD em PHP na Programação
+
+## 2.CRUD em PHP na Programação
 O que é CRUD?
 CRUD é um acrônimo utilizado na programação para representar as quatro operações básicas realizadas em bancos de dados:
 C — Create → Criar dados
@@ -42,8 +45,7 @@ PDO ou MySQLi
 
 
 
-
-Estrutura Básica de um CRUD
+## 3.Estrutura Básica de um CRUD
 Um sistema CRUD geralmente possui:
 Arquivo
 Função
@@ -59,7 +61,8 @@ conexao.php
 Faz conexão com o banco
 
 
-Banco de Dados
+## 4.Banco de Dados
+
 Antes de criar o CRUD, é necessário criar um banco de dados.
 Conexão com Banco de Dados
 Atualmente, o mais recomendado é utilizar o PDO, pois oferece:
@@ -73,7 +76,7 @@ A operação CREATE serve para cadastrar informações no banco.
 
 
 
-Código PHP
+## 5.Código PHP
 <?php
 
 include 'conexao.php';
@@ -94,7 +97,8 @@ if(isset($_POST['nome'])){
    echo "Usuário cadastrado!";
 }
 
-O que acontece?
+## 6.O que acontece?
+
 O usuário preenche o formulário
 O PHP recebe os dados
 O comando INSERT INTO salva no banco
@@ -105,7 +109,8 @@ A operação DELETE remove informações do banco.
 
 
 
-CRUD com Bootstrap
+## 7.CRUD com Bootstrap
+
 Muitos desenvolvedores utilizam o Bootstrap para deixar o sistema mais bonito e responsivo.
 Exemplo:
 <input type="text" class="form-control">
@@ -126,7 +131,8 @@ CERTO:
 $sql = $pdo->prepare("SELECT * FROM usuarios WHERE nome = :nome");
 
 
-2. Validação de Dados
+
+## 8.Validação de Dados
 Sempre validar:
 Emails
 Senhas
@@ -134,7 +140,7 @@ Campos vazios
 Tipos de dados
 
 
-3. Hash de Senhas
+## 9.Hash de Senhas
 Nunca salve senhas normais.
 Use:
 password_hash()
@@ -142,7 +148,7 @@ password_hash()
 password_verify()
 
 
-Vantagens do CRUD
+## 10.Vantagens do CRUD
 Organização
 Facilita manutenção do sistema.
 Reutilização
@@ -170,7 +176,7 @@ POST /usuarios
 PUT /usuarios/1
 DELETE /usuarios/1
 
-CRUD usando PDO vs MySQLi
+## 11.CRUD usando PDO vs MySQLi
 PDO
 MySQLi
 Funciona com vários bancos
@@ -199,7 +205,7 @@ Atualizar matrícula
 Excluir registros
 
 
-Boas Práticas
+## 12.Boas Práticas
 Separar arquivos
 Organize:
 conexão
@@ -213,7 +219,7 @@ Mais segurança.
 Tratar erros
 Evita falhas no sistema.
 
-Conclusão
+## 13.Conclusão
 O CRUD é a base da manipulação de dados em sistemas modernos. Em PHP, ele é amplamente utilizado junto com MySQL para criar aplicações dinâmicas e funcionais.
 Dominar CRUD é essencial para qualquer desenvolvedor back-end, pois praticamente todo sistema precisa:
 cadastrar,
