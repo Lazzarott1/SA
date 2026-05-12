@@ -32,68 +32,67 @@ No SCRUM existem três papéis principais:
 O Product Owner é o responsável pelo produto.
 Ele representa os interesses do cliente e garante que o sistema esteja sendo desenvolvido da maneira correta.
 
-Principais responsabilidades do Product Owner
-definir o que deve ser desenvolvido;
-organizar as prioridades do projeto;
-criar e gerenciar o Product Backlog;
-conversar com clientes e stakeholders;
-garantir que a equipe esteja entregando valor;
-decidir quais funcionalidades têm maior prioridade.
+Principais responsabilidades do Product Owner:
+- Definir o que deve ser desenvolvido;
+- Organizar as prioridades do projeto;
+- Criar e gerenciar o Product Backlog;
+- Conversar com clientes e stakeholders;
+- Garantir que a equipe esteja entregando valor;
+- Decidir quais funcionalidades têm maior prioridade.
 
 Product Backlog
 É uma lista com tudo o que precisa ser desenvolvido no projeto.
 
 Exemplo:
-tela de login;
-cadastro de usuários;
-sistema de pagamentos;
-relatórios;
-notificações.
-O PO organiza essa lista por prioridade.
+- Tela de login;
+- Cadastro de usuários;
+- Sistema de pagamentos;
+- Relatórios;
+- O PO organiza essa lista por prioridade.
 
-Características importantes de um Product Owner
-boa comunicação;
-visão de negócio;
-capacidade de tomada de decisão;
-organização;
-conhecimento do produto.
+Características importantes de um Product Owner:
+- Boa comunicação;
+- Visão de negócio;
+- Capacidade de tomada de decisão;
+- Organização;
+- Conhecimento do produto.
 
 
 ## 2. Scrum Master
 O Scrum Master é o responsável por garantir que o SCRUM esteja sendo aplicado corretamente.
 Ele funciona como um facilitador da equipe.
 
-Principais responsabilidades do Scrum Master
-ajudar a equipe a seguir o SCRUM;
-remover obstáculos que atrapalham o trabalho;
-melhorar a produtividade da equipe;
-facilitar reuniões;
-incentivar a comunicação;
-proteger a equipe contra interferências externas.
+Principais responsabilidades do Scrum Master:
+- Ajudar a equipe a seguir o SCRUM;
+- Remover obstáculos que atrapalham o trabalho;
+- Melhorar a produtividade da equipe;
+- Facilitar reuniões;
+- Incentivar a comunicação;
+- Proteger a equipe contra interferências externas.
 
-O que o Scrum Master NÃO faz
-não é chefe da equipe;
-não distribui tarefas;
-não controla pessoas;
-não toma decisões pelo Product Owner.
+O que o Scrum Master NÃO faz:
+- Não é chefe da equipe;
+- Não distribui tarefas;
+- Não controla pessoas;
+- Não toma decisões pelo Product Owner.
 
-Características importantes do Scrum Master
-liderança;
-organização;
-comunicação;
-resolução de problemas;
-conhecimento em metodologias ágeis.
+Características importantes do Scrum Master:
+- Liderança;
+- Organização;
+- Comunicação;
+- Resolução de problemas;
+- Conhecimento em metodologias ágeis.
 
 
 ## 3. Development Team (Equipe de Desenvolvimento)
 É a equipe responsável por desenvolver o produto.
 Ela pode ser formada por:
-programadores;
-designers;
-analistas;
-testadores;
-engenheiros de software;
-especialistas em banco de dados.
+- Programadores;
+- Designers;
+- Analistas;
+- Testadores;
+- Engenheiros de software;
+- Especialistas em banco de dados.
 
 
 Principais responsabilidades:
@@ -166,47 +165,60 @@ aumenta organização.
 
 ## 4. Sprint Review
 É a reunião realizada ao final da Sprint para apresentar o que foi desenvolvido.
-Objetivos
-mostrar o sistema funcionando;
-receber feedback;
-validar funcionalidades;
-identificar melhorias.
-Participantes
-equipe SCRUM;
-clientes;
-stakeholders.
+Objetivos:
+-mostrar o sistema funcionando;
+- Receber feedback;
+- Validar funcionalidades;
+- Identificar melhorias.
+- Participantes
+- Equipe SCRUM;
+- Clientes;
+- Stakeholders.
 
 ## 5. Sprint Retrospective
 É uma reunião de reflexão sobre a Sprint.
 A equipe analisa:
-o que funcionou bem;
-o que pode melhorar;
-quais problemas aconteceram;
-como melhorar na próxima Sprint.
-Objetivo
+- O que funcionou bem;
+- O que pode melhorar;
+- Quais problemas aconteceram;
+- Como melhorar na próxima Sprint.
+
+Objetivo:
 Promover melhoria contínua da equipe.
 
 
 ## Benefícios do uso do SCRUM em projetos de software
+
 O SCRUM traz diversas vantagens para empresas e equipes.
+
 1. Maior produtividade
 As equipes trabalham de forma mais organizada e focada.
+
 2. Entregas rápidas
 O sistema é entregue em pequenas partes, permitindo resultados mais rápidos.
+
 3. Flexibilidade para mudanças
 Mudanças podem ser feitas durante o projeto sem grandes problemas.
+
 4. Melhor comunicação
 As reuniões frequentes melhoram a troca de informações.
+
 5. Redução de erros
 Problemas são identificados rapidamente.
+
 6. Maior satisfação do cliente
 O cliente acompanha o desenvolvimento e participa do processo.
+
 7. Transparência
 Todos conseguem acompanhar o andamento do projeto.
+
 8. Melhoria contínua
 A equipe sempre busca evoluir e melhorar seus processos.
 
 
 ## Conclusão
 O SCRUM vai muito além de um simples conjunto de regras para gerenciar tarefas; ele representa uma mudança de paradigma na forma como lidamos com a complexidade e a incerteza no desenvolvimento de projetos. Ao estruturar o trabalho em ciclos curtos e iterativos, a metodologia permite que as empresas abandonem a rigidez dos planos tradicionais em favor de uma adaptabilidade estratégica, onde o valor é entregue de forma incremental e o aprendizado é constante. O sucesso do framework reside no equilíbrio entre seus papéis definidos, eventos ritmados e uma cultura de transparência absoluta, o que não apenas acelera a entrega de software, mas também constrói equipes mais resilientes, autônomas e alinhadas às reais necessidades do cliente. Em última análise, adotar o SCRUM é escolher um caminho de melhoria contínua, onde cada erro se torna uma oportunidade de ajuste e cada acerto é um degrau para a excelência operacional, garantindo que o produto final não seja apenas o que foi planejado no início, mas sim a melhor solução possível diante das mudanças do mercado.
+
+
+## FIM 
 
