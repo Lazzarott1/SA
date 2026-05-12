@@ -12,19 +12,26 @@
 
     <header class="container-fluid p-2 rounded-0" style="background-color: #1b3f53; color: #ffffff;">
         <div id="header" class="hstack gap-3 px-2">
-            <div>
-                <h2 class="mb-0 text-white">FerroMonitor</h2>
-                <p>SISTEMA FERROVIÁRIO</p>
+            <div class="d-flex" id="logo">
+                <img src="../assets/img/Gemini_Generated_Image_z2d26bz2d26bz2d2.png" alt="Logo">
+                <div class="nome-sistema">
+                    <h2 class="mb-0 text-white">FerroMonitor</h2>
+                    <p>SISTEMA FERROVIÁRIO</p>
+                </div>
             </div>
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1b3f53;">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <div class="d-flex">
                             <ul class="navbar-nav">
-
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link active text-white" aria-current="page" href="#">Dashboard</a>
+                                        <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-white" aria-current="page" href="#">Dashboard</a>
                                     </li>
                                 </div>
                                 <div>
@@ -64,8 +71,9 @@
                     </div>
                 </div>
             </nav>
+
             <div>
-                <button class="btn btn-warning">Sair</button>
+                <button class="btn-sair">Sair</button>
             </div>
         </div>
     </header>
