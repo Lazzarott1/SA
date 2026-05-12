@@ -1,3 +1,7 @@
+console.log("Console carregou");
+
+localStorage.setItem("matheus", "1234");
+
 document.getElementById("form-login").onsubmit = (e) => {
     e.preventDefault();
 
@@ -18,7 +22,7 @@ document.getElementById("form-login").onsubmit = (e) => {
     
     if (salva === senha) {
         mensagem.innerHTML = "<div class='alert alert-success'>Login realizado com sucesso!</div>";
-        window.location.href = "public/tela-geral-home.html";
+        window.location.href = "tela-geral-home.html";
     } else {
         mensagem.innerHTML = "<div class='alert alert-danger'>Usuário ou senha incorretos!</div>";
     }
