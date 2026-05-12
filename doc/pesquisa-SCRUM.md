@@ -1,4 +1,4 @@
-SCRUM
+## SCRUM
 O que é SCRUM
 O SCRUM é uma metodologia ágil utilizada principalmente no desenvolvimento de software para organizar, planejar e gerenciar projetos de forma mais rápida, eficiente e colaborativa.
 
