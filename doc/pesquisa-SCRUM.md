@@ -1,5 +1,5 @@
 ## SCRUM
-O que é SCRUM
+O que é SCRUM:
 O SCRUM é uma metodologia ágil utilizada principalmente no desenvolvimento de software para organizar, planejar e gerenciar projetos de forma mais rápida, eficiente e colaborativa.
 
 Ele foi criado para ajudar equipes a trabalharem em projetos complexos, dividindo o trabalho em pequenas etapas chamadas de Sprints, permitindo entregas frequentes e melhorias contínuas.
@@ -28,7 +28,7 @@ Principais papéis do SCRUM
 
 No SCRUM existem três papéis principais:
 
-1. Product Owner (PO)
+## 1. Product Owner (PO)
 O Product Owner é o responsável pelo produto.
 Ele representa os interesses do cliente e garante que o sistema esteja sendo desenvolvido da maneira correta.
 
@@ -59,7 +59,7 @@ organização;
 conhecimento do produto.
 
 
-2. Scrum Master
+## 2. Scrum Master
 O Scrum Master é o responsável por garantir que o SCRUM esteja sendo aplicado corretamente.
 Ele funciona como um facilitador da equipe.
 
@@ -85,7 +85,7 @@ resolução de problemas;
 conhecimento em metodologias ágeis.
 
 
-3. Development Team (Equipe de Desenvolvimento)
+## 3. Development Team (Equipe de Desenvolvimento)
 É a equipe responsável por desenvolver o produto.
 Ela pode ser formada por:
 programadores;
@@ -96,25 +96,26 @@ engenheiros de software;
 especialistas em banco de dados.
 
 
-Principais responsabilidades
-desenvolver as funcionalidades;
-testar o sistema;
-corrigir erros;
-entregar incrementos do produto;
-trabalhar em equipe.
-Características da equipe SCRUM
-Equipe auto-organizada
-A própria equipe decide como realizará o trabalho.
-Equipe multifuncional
-Possui diferentes profissionais com habilidades variadas.
-Colaboração constante
-Todos trabalham juntos para alcançar o objetivo da Sprint.
+Principais responsabilidades:
+- Desenvolver as funcionalidades;
+- Testar o sistema;
+- Corrigir erros;
+- Entregar incrementos do produto;
+- Trabalhar em equipe.
+
+Características da equipe SCRUM:
+- Equipe auto-organizada
+- A própria equipe decide como realizará o trabalho.
+- Equipe multifuncional
+- Possui diferentes profissionais com habilidades variadas.
+- Colaboração constante
+- Todos trabalham juntos para alcançar o objetivo da Sprint.
 
 
-Eventos do SCRUM
+## Eventos do SCRUM
 Os eventos do SCRUM servem para organizar o trabalho e acompanhar o progresso do projeto.
 
-1. Sprint
+## 1. Sprint
 A Sprint é um ciclo de desenvolvimento com tempo definido.
 Normalmente dura:
 1 semana;
@@ -135,7 +136,7 @@ recuperação de senha;
 perfil do usuário.
 
 
-2. Sprint Planning
+## 2. Sprint Planning
 É a reunião de planejamento da Sprint.
 Nela, a equipe decide:
 o que será desenvolvido;
@@ -148,7 +149,7 @@ equipe de desenvolvimento.
 Resultado da Sprint Planning
 Criação do Sprint Backlog, que contém as tarefas da Sprint atual.
 
-3. Daily Scrum
+## 3. Daily Scrum
 Também chamada de Daily Meeting.
 É uma reunião diária e rápida, geralmente com duração de 15 minutos.
 Objetivo
@@ -163,7 +164,7 @@ evita atrasos;
 identifica problemas rapidamente;
 aumenta organização.
 
-4. Sprint Review
+## 4. Sprint Review
 É a reunião realizada ao final da Sprint para apresentar o que foi desenvolvido.
 Objetivos
 mostrar o sistema funcionando;
@@ -175,7 +176,7 @@ equipe SCRUM;
 clientes;
 stakeholders.
 
-5. Sprint Retrospective
+## 5. Sprint Retrospective
 É uma reunião de reflexão sobre a Sprint.
 A equipe analisa:
 o que funcionou bem;
@@ -186,7 +187,7 @@ Objetivo
 Promover melhoria contínua da equipe.
 
 
-Benefícios do uso do SCRUM em projetos de software
+## Benefícios do uso do SCRUM em projetos de software
 O SCRUM traz diversas vantagens para empresas e equipes.
 1. Maior produtividade
 As equipes trabalham de forma mais organizada e focada.
@@ -206,6 +207,6 @@ Todos conseguem acompanhar o andamento do projeto.
 A equipe sempre busca evoluir e melhorar seus processos.
 
 
-Conclusão
+## Conclusão
 O SCRUM vai muito além de um simples conjunto de regras para gerenciar tarefas; ele representa uma mudança de paradigma na forma como lidamos com a complexidade e a incerteza no desenvolvimento de projetos. Ao estruturar o trabalho em ciclos curtos e iterativos, a metodologia permite que as empresas abandonem a rigidez dos planos tradicionais em favor de uma adaptabilidade estratégica, onde o valor é entregue de forma incremental e o aprendizado é constante. O sucesso do framework reside no equilíbrio entre seus papéis definidos, eventos ritmados e uma cultura de transparência absoluta, o que não apenas acelera a entrega de software, mas também constrói equipes mais resilientes, autônomas e alinhadas às reais necessidades do cliente. Em última análise, adotar o SCRUM é escolher um caminho de melhoria contínua, onde cada erro se torna uma oportunidade de ajuste e cada acerto é um degrau para a excelência operacional, garantindo que o produto final não seja apenas o que foi planejado no início, mas sim a melhor solução possível diante das mudanças do mercado.
 
