@@ -28,7 +28,7 @@ Principais papéis do SCRUM
 
 No SCRUM existem três papéis principais:
 
-1. Product Owner (PO)
+## 1. Product Owner (PO)
 O Product Owner é o responsável pelo produto.
 Ele representa os interesses do cliente e garante que o sistema esteja sendo desenvolvido da maneira correta.
 
@@ -96,19 +96,20 @@ engenheiros de software;
 especialistas em banco de dados.
 
 
-Principais responsabilidades
-desenvolver as funcionalidades;
-testar o sistema;
-corrigir erros;
-entregar incrementos do produto;
-trabalhar em equipe.
-Características da equipe SCRUM
-Equipe auto-organizada
-A própria equipe decide como realizará o trabalho.
-Equipe multifuncional
-Possui diferentes profissionais com habilidades variadas.
-Colaboração constante
-Todos trabalham juntos para alcançar o objetivo da Sprint.
+Principais responsabilidades:
+- Desenvolver as funcionalidades;
+- Testar o sistema;
+- Corrigir erros;
+- Entregar incrementos do produto;
+- Trabalhar em equipe.
+
+Características da equipe SCRUM:
+- Equipe auto-organizada
+- A própria equipe decide como realizará o trabalho.
+- Equipe multifuncional
+- Possui diferentes profissionais com habilidades variadas.
+- Colaboração constante
+- Todos trabalham juntos para alcançar o objetivo da Sprint.
 
 
 ## Eventos do SCRUM
