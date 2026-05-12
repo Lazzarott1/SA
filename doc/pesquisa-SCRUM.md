@@ -207,7 +207,5 @@ A equipe sempre busca evoluir e melhorar seus processos.
 
 
 Conclusão
-O SCRUM é uma metodologia ágil muito utilizada no desenvolvimento de software por proporcionar organização, colaboração e rapidez nas entregas.
-Seu funcionamento baseado em Sprints, reuniões frequentes e trabalho em equipe permite que projetos sejam desenvolvidos com maior qualidade e flexibilidade.
-Além disso, o SCRUM ajuda empresas a responderem rapidamente às mudanças do mercado e às necessidades dos clientes, tornando o desenvolvimento de software mais eficiente e moderno.
+O SCRUM vai muito além de um simples conjunto de regras para gerenciar tarefas; ele representa uma mudança de paradigma na forma como lidamos com a complexidade e a incerteza no desenvolvimento de projetos. Ao estruturar o trabalho em ciclos curtos e iterativos, a metodologia permite que as empresas abandonem a rigidez dos planos tradicionais em favor de uma adaptabilidade estratégica, onde o valor é entregue de forma incremental e o aprendizado é constante. O sucesso do framework reside no equilíbrio entre seus papéis definidos, eventos ritmados e uma cultura de transparência absoluta, o que não apenas acelera a entrega de software, mas também constrói equipes mais resilientes, autônomas e alinhadas às reais necessidades do cliente. Em última análise, adotar o SCRUM é escolher um caminho de melhoria contínua, onde cada erro se torna uma oportunidade de ajuste e cada acerto é um degrau para a excelência operacional, garantindo que o produto final não seja apenas o que foi planejado no início, mas sim a melhor solução possível diante das mudanças do mercado.
 
