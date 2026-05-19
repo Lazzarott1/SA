@@ -80,3 +80,14 @@
     width: auto;
     border-radius: 5px;
 }
+
+.titulo-sensores {
+    color: #7195d4;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.subtitulo-sensores {
+    color: #799cd8;
+    margin-left: 50px;
+}
