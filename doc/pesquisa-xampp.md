@@ -159,11 +159,11 @@ Principais partes da tela
 Modules
 
 Mostra os serviços disponíveis:
-Apache → servidor web para rodar sites em PHP;
-MySQL → banco de dados;
-FileZilla → servidor FTP;
-Mercury → servidor de e-mail;
-Tomcat → servidor Java.
+-Apache → servidor web para rodar sites em PHP;
+-MySQL → banco de dados;
+-FileZilla → servidor FTP;
+-Mercury → servidor de e-mail;
+-Tomcat → servidor Java.
 
 ## Start
 Inicia o serviço selecionado.
