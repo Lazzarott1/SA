@@ -154,6 +154,49 @@ O ambiente local permite:
 -Correção de erros;
 -Desenvolvimento mais eficiente.
 
+## Sobre a tela inicial
+Principais partes da tela
+Modules
+
+Mostra os serviços disponíveis:
+Apache → servidor web para rodar sites em PHP;
+MySQL → banco de dados;
+FileZilla → servidor FTP;
+Mercury → servidor de e-mail;
+Tomcat → servidor Java.
+
+## Start
+Inicia o serviço selecionado.
+Exemplo:
+iniciar Apache e MySQL para usar um site local.
+
+## Admin
+Abre o painel do serviço no navegador.
+Exemplo:
+phpMyAdmin do MySQL.
+
+## Config
+Permite alterar configurações do serviço.
+
+## Logs
+Mostra erros e informações do funcionamento.
+
+## Botões da direita
+Config → configurações do XAMPP;
+Netstat → mostra portas em uso;
+Shell → abre terminal;
+Explorer → abre a pasta do XAMPP;
+Help → ajuda;
+Quit → fecha o programa.
+
+## Uso básico
+Para desenvolver sites localmente:
+Clique em Start no Apache;
+Clique em Start no MySQL;
+Acesse no navegador:
+ -localhost
+ -localhost/phpmyadmin
+O XAMPP é usado para criar um ambiente de desenvolvimento local no computador.
 
 ## Conclusão
 O XAMPP é uma das ferramentas mais importantes para desenvolvimento web local. Ele oferece um ambiente completo contendo Apache, PHP, MySQL/MariaDB e phpMyAdmin, permitindo criar, testar e administrar aplicações web de forma prática e eficiente. Sua facilidade de instalação e utilização faz com que seja amplamente utilizado tanto por iniciantes quanto por desenvolvedores profissionais.
