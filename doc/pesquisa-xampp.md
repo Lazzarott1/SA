@@ -1,7 +1,7 @@
 ## XAMPP
 O XAMPP é um pacote de softwares utilizado para criar um ambiente de desenvolvimento local em computadores. Ele permite executar sites e sistemas web sem precisar contratar uma hospedagem online.
-O nome XAMPP significa:
 
+O nome XAMPP significa:
 - X = multiplataforma (Windows, Linux e macOS)
 - A = Apache
 - M = MySQL/MariaDB
@@ -35,7 +35,7 @@ Finalidade
 -Controle de estoque;
 -Armazenamento de pedidos e informações.
 
-Recursos
+Recursos:
 -Linguagem SQL;
 -Criação de tabelas;
 -Consultas e manipulação de dados.
@@ -43,13 +43,13 @@ Recursos
 # 3. PHP
 O PHP é uma linguagem de programação voltada para desenvolvimento web.
 
-Finalidade
+Finalidade:
 -Criar páginas dinâmicas;
 -Conectar sistemas ao banco de dados;
 -Processar formulários;
 -Desenvolver sistemas web completos.
 
-Exemplos
+Exemplos:
 -Login de usuários;
 -Sistemas CRUD;
 -Sites dinâmicos;
@@ -61,13 +61,13 @@ O PHP é executado no servidor Apache antes da página ser enviada ao navegador.
 # 4. phpMyAdmin
 O phpMyAdmin é uma ferramenta gráfica utilizada para administrar bancos de dados MySQL/MariaDB.
 
-Finalidade
+Finalidade:
 -Criar bancos de dados;
 -Criar tabelas;
 -Inserir, editar e excluir dados;
 -Executar comandos SQL.
 
-Vantagens
+Vantagens:
 -Interface simples;
 -Não precisa usar apenas comandos SQL;
 -Facilita o gerenciamento do banco de dados.
@@ -79,7 +79,7 @@ http://localhost/phpmyadmin
 
 ## Como Realizar a Instalação do XAMPP
 
-1. Download
+1. Download:
 Acesse o site oficial do XAMPP:
 XAMPP Official Website
 Escolha a versão compatível com seu sistema operacional:
