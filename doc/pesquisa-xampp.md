@@ -19,13 +19,14 @@ Processar requisições HTTP;
 Exibir páginas HTML, CSS, JavaScript e arquivos PHP no navegador.
 Funcionamento
 Quando o usuário acessa localhost, o Apache interpreta o pedido e entrega os arquivos do projeto ao navegador.
-Exemplo
+Exemplo:
 Ao criar um arquivo chamado index.php dentro da pasta htdocs, o Apache permite acessá-lo pelo navegador usando:
 http://localhost/
 
 # 2. MySQL/MariaDB
 O XAMPP utiliza normalmente o MariaDB, que é compatível com o MySQL.
-Finalidade
+
+Finalidade:
 -Armazenar dados do sistema;
 -Criar bancos de dados;
 -Gerenciar tabelas, usuários e informações.
