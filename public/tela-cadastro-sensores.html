@@ -82,113 +82,124 @@
 
     <!-- Área do Guesser -->
 
-    <main>
-        <div>
-            <h3 class="titulo-sensores">Sensores</h3>
-            <p class="subtitulo-sensores">Gerencie os sensores cadastrados na rodovia</p>
+    <main class="container-fluid px-4 mt-4">
 
-            <div class="d-flex justify-content-between align-items-end mb-4">
-                <button type="button" class="btn text-white px-3 py-2 d-flex align-items-center gap-2"
-                    style="background-color: #1b3f53; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px;"
-                    data-bs-toggle="collapse" data-bs-target="#collapseNovoSensor" aria-expanded="false"
-                    aria-controls="collapseNovoSensor">
-                    <span style="font-size: 1.2rem; line-height: 1;">+</span> NOVO SENSOR
-                </button>
-                <form class="dropdown-menu p-4">
-                    <div class="mb-3">
-                        <label for="exampleDropdownFormEmail2" class="form-label">Nome do Sensor *</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail2"
-                            placeholder="email@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleDropdownFormPassword2" class="form-label">Categoria *</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2"
-                            placeholder="Password">
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                            <label class="form-check-label" for="dropdownCheck2">
-                                Remember me
-                            </label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-white">Cancelar</button>
+        <div class="d-flex justify-content-between align-items-end mb-4">
 
-                    <button type="submit" class="btn btn-primary">Cadastrar sensor</button>
-                </form>
-            </div>
+
+
+
+
             <div>
+                <h3 class="titulo-sensores">Sensores</h3>
 
+                <p class="subtitulo-sensores">Gerencie os sensores cadastrados na rodovia</p>
             </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <button type="button" class="btn-primary btn text-white px-3 py-2 d-flex align-items-center gap-2"
+                data-bs-toggle="collapse" data-bs-target="#collapseCadastroSensor" aria-expanded="false"
+                aria-controls="collapseCadastroSensor">
 
-            <!-- Área do Lazza -->
-            <div class="d-flex flex-column align-items-center gap-5 w-100"
-                style="padding-top: 60px; min-height: 100vh; background-color: #f8f9fa;">
+                <span class="botaonovosensor">+</span> NOVO SENSOR
 
-                <div class="card shadow-sm border-1 p-0" style="width: 900px; border-radius: 4px;">
+            </button>
 
-                    <div class="bg-primary-subtle text-primary-emphasis p-2 border-bottom fw-bold"
-                        style="font-size: 0.7rem;">
-                        (∞) SENSORES CADASTRADOS
+            <div class="collapse">
+                <div class="card card-body p-0 border-0 rounded-0 mb-4" style="background-color: transparent;">
+                    <div class="cardcadastro">
+
+                        <span class="spancadastrosensor">CADASTRAR NOVO SENSOR</span>
+
                     </div>
 
-                    <table class="table table-bordered table-hover mb-0 align-middle">
-                        <thead class="table-light">
-                            <tr class="text-secondary" style="font-size: 0.75rem;">
-                                <th class="fw-semibold">ID</th>
-                                <th class="fw-semibold">NOME</th>
-                                <th class="fw-semibold">CATEGORIA</th>
-                                <th class="fw-semibold">TIPO</th>
-                                <th class="fw-semibold">STATUS</th>
-                                <th class="fw-semibold text-center">AÇÕES</th>
-                            </tr>
-                        </thead>
-                        <tbody style="font-size: 0.85rem;">
-                            <tr>
-                                <td class="text-primary-emphasis fw-bold">69E09513</td>
-                                <td class="text-secondary">Sensor Velocidade KM-32</td>
-                                <td class="text-center">
-                                    <span
-                                        class="badge border border-info-subtle bg-info-subtle text-info-emphasis rounded-1">TREM</span>
-                                </td>
-                                <td class="text-body-tertiary">Velocidade</td>
-                                <td>
-                                    <span
-                                        class="badge border border-success-subtle bg-success-subtle text-success-emphasis rounded-1">ATIVO</span>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-outline-Primary">&#x1F441;&#xFE0E</button>
-                                    <button class="btn btn-sm btn-outline-danger">X</button>
-                                </td>
-                            </tr>
+                    <form class="p-4 bg-white" style="border: 1px solid #BCCCDC" ; border-top:none;></form>>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label for="nomeSensor" class="form-label" id="labelsensor">NOME DO SENSOR</label>
 
-                            <tr>
-                                <td class="text-primary-emphasis fw-bold">69E09513</td>
-                                <td class="text-secondary">Sensor Localização TS-02</td>
-                                <td class="text-center">
-                                    <span
-                                        class="badge border border-secondary-subtle bg-secondary-subtle text-secondary-emphasis rounded-1">TRILHO</span>
-                                </td>
-                                <td class="text-body-tertiary">Localização</td>
-                                <td>
-                                    <span
-                                        class="badge border border-warning-subtle bg-warning-subtle text-warning-emphasis rounded-1">ALERTA</span>
-                                </td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-outline-Primary">&#x1F441;&#xFE0E</button>
-                                    <button class="btn btn-sm btn-outline-danger">X</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            //fazer css do nomeSensor
+                            <input type="text" class="form-control-rounded-1" id="nomeSensor" placeholder="Ex: Sensor 01">
+
+                        </div>
+
+                    </div>
+
+                    </form>
+
                 </div>
+
             </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Área do Lazza -->
+        <div class="d-flex flex-column align-items-center gap-5 w-100"
+            style="padding-top: 60px; min-height: 100vh; background-color: #f8f9fa;">
+
+            <div class="card shadow-sm border-1 p-0" style="width: 900px; border-radius: 4px;">
+
+                <div class="bg-primary-subtle text-primary-emphasis p-2 border-bottom fw-bold"
+                    style="font-size: 0.7rem;">
+                    (∞) SENSORES CADASTRADOS
+                </div>
+
+                <table class="table table-bordered table-hover mb-0 align-middle">
+                    <thead class="table-light">
+                        <tr class="text-secondary" style="font-size: 0.75rem;">
+                            <th class="fw-semibold">ID</th>
+                            <th class="fw-semibold">NOME</th>
+                            <th class="fw-semibold">CATEGORIA</th>
+                            <th class="fw-semibold">TIPO</th>
+                            <th class="fw-semibold">STATUS</th>
+                            <th class="fw-semibold text-center">AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 0.85rem;">
+                        <tr>
+                            <td class="text-primary-emphasis fw-bold">69E09513</td>
+                            <td class="text-secondary">Sensor Velocidade KM-32</td>
+                            <td class="text-center">
+                                <span
+                                    class="badge border border-info-subtle bg-info-subtle text-info-emphasis rounded-1">TREM</span>
+                            </td>
+                            <td class="text-body-tertiary">Velocidade</td>
+                            <td>
+                                <span
+                                    class="badge border border-success-subtle bg-success-subtle text-success-emphasis rounded-1">ATIVO</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-Primary">&#x1F441;&#xFE0E</button>
+                                <button class="btn btn-sm btn-outline-danger">X</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-primary-emphasis fw-bold">69E09513</td>
+                            <td class="text-secondary">Sensor Localização TS-02</td>
+                            <td class="text-center">
+                                <span
+                                    class="badge border border-secondary-subtle bg-secondary-subtle text-secondary-emphasis rounded-1">TRILHO</span>
+                            </td>
+                            <td class="text-body-tertiary">Localização</td>
+                            <td>
+                                <span
+                                    class="badge border border-warning-subtle bg-warning-subtle text-warning-emphasis rounded-1">ALERTA</span>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-outline-Primary">&#x1F441;&#xFE0E</button>
+                                <button class="btn btn-sm btn-outline-danger">X</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
-    </main>
+
 
 </body>
 

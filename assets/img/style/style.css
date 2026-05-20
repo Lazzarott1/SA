@@ -76,7 +76,7 @@
 
 #logo img {
     height: 100%;
-    max-height: 60px; 
+    max-height: 60px;
     width: auto;
     border-radius: 5px;
 }
@@ -90,4 +90,32 @@
 .subtitulo-sensores {
     color: #799cd8;
     margin-left: 50px;
+}
+
+.cardcadastro {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    background-color: #D9E2EC;
+    border: 1px solid #BCCCDC !important;
+}
+
+.spannovosensor {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.spancadastrosensor {
+    color: #486581;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+}
+
+#labelsensor {
+    color: #486581;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
 }
