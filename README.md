@@ -10,7 +10,7 @@ O principal objetivo deste projeto é criar uma ferramenta que ajude a tomar dec
 
 ### Equipe:
 
-O projeto é desenvolvido por Lucas Lazzarotti, Matheus Guesser, Caio Marques e Luis Pedro Mathias.
+O projeto é desenvolvido por Caio Marques, Lucas Lazzarotti, Luis Pedro Mathias e Matheus Guesser.
 
 ### Funcionalidades Previstas:
 
@@ -19,3 +19,7 @@ O sistema funciona começando pelo recebimento e processamento das informações
 ### Especificações Técnicas:
 
 A qualidade e a confiabilidade do FerroMonitor são sustentadas por requisitos não funcionais rigorosos, como a latência máxima de 500ms para o processamento de dados e uma disponibilidade de sistema de 99,9%. A interface foi projetada para ser responsiva e compatível com os principais navegadores do mercado, priorizando a acessibilidade através de diretrizes WCAG e alto contraste em alertas críticos. Além disso, a arquitetura modular do software permite a escalabilidade para milhares de sensores e garante a integridade dos dados e a segurança das sessões dos usuários.
+
+### Técnologias Utilizadas:
+
+Além do HTML, tiveram várias linguagens e tecnologias as quais utilizamos para fazer tudo funcionar do melhor jeito possível, como, XAMPP, JavaScript, PHP, CRUD, MySQL através do PHPmyAdmin, Scrum, Kanban, CSS, Bootstrap e etc.
