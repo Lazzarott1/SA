@@ -3,13 +3,13 @@
 include '../infra/conexao.php';
 
 if (!isset($conexao) || $conexao === false) {
-    die("Erro: Conexão com o banco de dados não estabelecida.");
+    die("Erro: conexão com o banco de dados não estabelecida.");
 }
 
 
-/* =========================
+/* ==========================================
    CADASTRAR SENSOR
-========================= */
+========================================== */
 
 if (isset($_POST['cadastrar'])) {
 
@@ -18,11 +18,15 @@ if (isset($_POST['cadastrar'])) {
     $tipo = $_POST['tipo'];
     $status = $_POST['status'];
 
-    $sql = "INSERT INTO sensores 
-        (nome_sensor, categoria_sensor, tipo_sensor, status_sensor)
-        VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO sensores
+            (nome_sensor, categoria_sensor, tipo_sensor, status_sensor)
+            VALUES (?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conexao, $sql);
+
+    if (!$stmt) {
+        die("Erro ao preparar o cadastro: " . mysqli_error($conexao));
+    }
 
     mysqli_stmt_bind_param(
         $stmt,
@@ -33,20 +37,28 @@ if (isset($_POST['cadastrar'])) {
         $status
     );
 
-    mysqli_stmt_execute($stmt);
+    if (!mysqli_stmt_execute($stmt)) {
+        die("Erro ao cadastrar sensor: " . mysqli_stmt_error($stmt));
+    }
+
+    mysqli_stmt_close($stmt);
 
     header("Location: tela-cadastro-sensores.php");
     exit;
 }
 
 
-/* =========================
+/* ==========================================
    BUSCAR SENSORES
-========================= */
+========================================== */
 
-$sql = "SELECT * FROM sensores ORDER BY id DESC";
+$sql = "SELECT * FROM sensores ORDER BY id_sensor DESC";
 
 $resultado = mysqli_query($conexao, $sql);
+
+if (!$resultado) {
+    die("Erro ao buscar sensores: " . mysqli_error($conexao));
+}
 
 ?>
 
@@ -73,13 +85,18 @@ $resultado = mysqli_query($conexao, $sql);
 <body>
 
 
-    <!-- HEADER -->
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
 
     <header class="container-fluid p-2 rounded-0"
         style="background-color: #1b3f53; color: #ffffff;">
 
         <div id="header"
             class="hstack gap-3 px-2">
+
+
+            <!-- LOGO -->
 
             <div class="d-flex"
                 id="logo">
@@ -102,7 +119,9 @@ $resultado = mysqli_query($conexao, $sql);
             </div>
 
 
-            <!-- NAVBAR -->
+            <!-- ==========================================
+                 NAVBAR
+            =========================================== -->
 
             <nav class="navbar navbar-expand-lg navbar-dark"
                 style="background-color: #1b3f53;">
@@ -179,6 +198,8 @@ $resultado = mysqli_query($conexao, $sql);
             </nav>
 
 
+            <!-- BOTÃO SAIR -->
+
             <div>
                 <button class="btn-sair">
                     Sair
@@ -190,12 +211,16 @@ $resultado = mysqli_query($conexao, $sql);
     </header>
 
 
-    <!-- CONTEÚDO -->
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    =========================================== -->
 
     <main class="container-fluid px-4 mt-4">
 
 
-        <!-- TÍTULO E BOTÃO -->
+        <!-- ==========================================
+             TÍTULO + BOTÃO NOVO SENSOR
+        =========================================== -->
 
         <div class="d-flex justify-content-between align-items-end mb-4">
 
@@ -217,7 +242,9 @@ $resultado = mysqli_query($conexao, $sql);
             <button type="button"
                 class="btn btn-primary text-white px-3 py-2 d-flex align-items-center gap-2"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseCadastroSensor">
+                data-bs-target="#collapseCadastroSensor"
+                aria-expanded="false"
+                aria-controls="collapseCadastroSensor">
 
                 <span class="botaonovosensor">
                     +
@@ -230,13 +257,17 @@ $resultado = mysqli_query($conexao, $sql);
         </div>
 
 
-        <!-- FORMULÁRIO COLLAPSE -->
+        <!-- ==========================================
+             FORMULÁRIO DE CADASTRO
+        =========================================== -->
 
         <div class="collapse mb-4"
             id="collapseCadastroSensor">
 
             <div class="card border-0">
 
+
+                <!-- TÍTULO DO FORMULÁRIO -->
 
                 <div class="cardcadastro p-3">
 
@@ -247,19 +278,23 @@ $resultado = mysqli_query($conexao, $sql);
                 </div>
 
 
+                <!-- FORM -->
+
                 <form method="POST"
                     class="p-4 bg-white"
                     style="border: 1px solid #BCCCDC; border-top: none;">
 
+
                     <div class="row g-4">
 
 
-                        <!-- NOME -->
+                        <!-- NOME DO SENSOR -->
 
                         <div class="col-md-6">
 
                             <label for="nomeSensor"
-                                class="form-label">
+                                class="form-label"
+                                id="labelsensor">
 
                                 NOME DO SENSOR
 
@@ -380,7 +415,9 @@ $resultado = mysqli_query($conexao, $sql);
                     </div>
 
 
-                    <!-- BOTÕES -->
+                    <!-- ==========================================
+                         BOTÕES
+                    =========================================== -->
 
                     <div class="mt-4 d-flex gap-2">
 
@@ -411,7 +448,8 @@ $resultado = mysqli_query($conexao, $sql);
         </div>
 
 
-        <!-- TABELA -->
+             <!-- TABELA DE SENSORES -->
+       
 
         <div class="d-flex flex-column align-items-center gap-5 w-100"
             style="padding-top: 60px; min-height: 100vh; background-color: #f8f9fa;">
@@ -419,6 +457,8 @@ $resultado = mysqli_query($conexao, $sql);
             <div class="card shadow-sm border-1 p-0"
                 style="width: 900px; border-radius: 4px;">
 
+
+                <!-- CABEÇALHO -->
 
                 <div class="bg-primary-subtle text-primary-emphasis p-2 border-bottom fw-bold"
                     style="font-size: 0.7rem;">
@@ -428,6 +468,8 @@ $resultado = mysqli_query($conexao, $sql);
                 </div>
 
 
+                <!-- TABELA -->
+
                 <table class="table table-bordered table-hover mb-0 align-middle">
 
                     <thead class="table-light">
@@ -435,12 +477,27 @@ $resultado = mysqli_query($conexao, $sql);
                         <tr class="text-secondary"
                             style="font-size: 0.75rem;">
 
-                            <th>ID</th>
-                            <th>NOME</th>
-                            <th>CATEGORIA</th>
-                            <th>TIPO</th>
-                            <th>STATUS</th>
-                            <th class="text-center">
+                            <th class="fw-semibold">
+                                ID
+                            </th>
+
+                            <th class="fw-semibold">
+                                NOME
+                            </th>
+
+                            <th class="fw-semibold">
+                                CATEGORIA
+                            </th>
+
+                            <th class="fw-semibold">
+                                TIPO
+                            </th>
+
+                            <th class="fw-semibold">
+                                STATUS
+                            </th>
+
+                            <th class="fw-semibold text-center">
                                 AÇÕES
                             </th>
 
@@ -451,64 +508,137 @@ $resultado = mysqli_query($conexao, $sql);
 
                     <tbody style="font-size: 0.85rem;">
 
-                        <?php while ($sensor = mysqli_fetch_assoc($resultado)) { ?>
+
+                        <?php if (mysqli_num_rows($resultado) > 0) { ?>
+
+
+                            <?php while ($sensor = mysqli_fetch_assoc($resultado)) { ?>
+
+                                <tr>
+
+
+                                    <!-- ID -->
+
+                                    <td class="text-primary-emphasis fw-bold">
+
+                                        <?php
+                                        echo $sensor['id_sensor'];
+                                        ?>
+
+                                    </td>
+
+
+                                    <!-- NOME -->
+
+                                    <td class="text-secondary">
+
+                                        <?php
+                                        echo htmlspecialchars(
+                                            $sensor['nome_sensor']
+                                        );
+                                        ?>
+
+                                    </td>
+
+
+                                    <!-- CATEGORIA -->
+
+                                    <td class="text-center">
+
+                                        <span class="badge border border-info-subtle
+                                            bg-info-subtle text-info-emphasis rounded-1">
+
+                                            <?php
+                                            echo htmlspecialchars(
+                                                $sensor['categoria_sensor']
+                                            );
+                                            ?>
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- TIPO -->
+
+                                    <td class="text-body-tertiary">
+
+                                        <?php
+                                        echo htmlspecialchars(
+                                            $sensor['tipo_sensor']
+                                        );
+                                        ?>
+
+                                    </td>
+
+
+                                    <!-- STATUS -->
+
+                                    <td>
+
+                                        <?php
+
+                                        $status = $sensor['status_sensor'];
+
+                                        if ($status == 'ATIVO') {
+                                            $classeStatus = 'bg-success-subtle text-success-emphasis border-success-subtle';
+                                        } elseif ($status == 'ALERTA') {
+                                            $classeStatus = 'bg-warning-subtle text-warning-emphasis border-warning-subtle';
+                                        } else {
+                                            $classeStatus = 'bg-secondary-subtle text-secondary-emphasis border-secondary-subtle';
+                                        }
+
+                                        ?>
+
+                                        <span class="badge border rounded-1 <?php echo $classeStatus; ?>">
+
+                                            <?php
+                                            echo htmlspecialchars($status);
+                                            ?>
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- AÇÕES -->
+
+                                    <td class="text-center">
+
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-primary">
+                                            👁️
+                                        </button>
+
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger">
+                                            X
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            <?php } ?>
+
+
+                        <?php } else { ?>
+
+                            <!-- CASO NÃO TENHA SENSORES -->
 
                             <tr>
 
-                                <td class="text-primary-emphasis fw-bold">
+                                <td colspan="6"
+                                    class="text-center text-muted py-4">
 
-                                    <?php echo $sensor['id']; ?>
-
-                                </td>
-
-
-                                <td class="text-secondary">
-
-                                    <?php echo htmlspecialchars($sensor['nome']); ?>
-
-                                </td>
-
-
-                                <td class="text-center">
-
-                                    <span class="badge bg-info-subtle text-info-emphasis">
-
-                                        <?php echo htmlspecialchars($sensor['categoria']); ?>
-
-                                    </span>
-
-                                </td>
-
-
-                                <td>
-
-                                    <?php echo htmlspecialchars($sensor['tipo']); ?>
-
-                                </td>
-
-
-                                <td>
-
-                                    <?php echo htmlspecialchars($sensor['status']); ?>
-
-                                </td>
-
-
-                                <td class="text-center">
-
-                                    <button class="btn btn-sm btn-outline-primary">
-                                        👁️
-                                    </button>
-
-                                    <button class="btn btn-sm btn-outline-danger">
-                                        X
-                                    </button>
+                                    Nenhum sensor cadastrado.
 
                                 </td>
 
                             </tr>
 
                         <?php } ?>
+
 
                     </tbody>
 
@@ -521,7 +651,9 @@ $resultado = mysqli_query($conexao, $sql);
     </main>
 
 
-    <!-- BOOTSTRAP -->
+    
+         <!-- BOOTSTRAP JS -->
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
