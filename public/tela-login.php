@@ -1,3 +1,42 @@
+<?php
+ 
+session_start();
+ 
+include '../infra/conexao.php';
+ 
+$erro = "";
+ 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $usuario = trim($_POST['usuario'] ?? '');
+    $senha = trim($_POST['senha'] ?? '');
+ 
+    $sql = "SELECT idusuario, usuario, senha FROM usuarios WHERE usuario = ?";
+    $stmt = mysqli_prepare($conexao, $sql);
+ 
+    if ($stmt === false) {
+        die('Erro ao preparar a consulta: ' . mysqli_error($conexao));
+    }
+ 
+    mysqli_stmt_bind_param($stmt, 's', $usuario);
+    mysqli_stmt_execute($stmt);
+    $resultado = mysqli_stmt_get_result($stmt);
+    $dados = mysqli_fetch_assoc($resultado);
+ 
+    mysqli_stmt_close($stmt);
+ 
+    if ($dados && password_verify($senha, $dados['senha'])) {
+        $_SESSION['idusuario'] = $dados['idusuario'];
+        $_SESSION['usuario'] = $dados['usuario'];
+ 
+        header("Location: ../index.php");
+        exit();
+    } else {
+        $erro = "Usuário ou senha incorretos.";
+    }
+}
+ 
+?>
+
 <html lang="en">
 
 <head>
