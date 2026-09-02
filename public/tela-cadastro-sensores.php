@@ -667,9 +667,21 @@ if (!$resultado) {
                                     </td>
 
 
-                                    <!-- EXCLUIR -->
+                                    <!-- AÇÕES -->
 
                                     <td class="text-center">
+
+                                        <!-- EDITAR -->
+
+                                        <a href="editar-sensor.php?id=<?php echo $sensor['id_sensor']; ?>"
+                                            class="btn btn-sm btn-outline-primary me-1">
+
+                                            EDITAR
+
+                                        </a>
+
+
+                                        <!-- EXCLUIR -->
 
                                         <form method="POST"
                                             style="display: inline;"
@@ -715,7 +727,7 @@ if (!$resultado) {
 
                         <?php } ?>
 
-                    </tbody>
+                    </body>
 
                 </table>
 
