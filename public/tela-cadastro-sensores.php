@@ -7,33 +7,66 @@ if (!isset($conexao) || $conexao === false) {
 }
 
 
-/* ==========================================
-   CADASTRAR SENSOR
-========================================== */
+//    EXCLUIR SENSOR
+
+if (isset($_POST['excluir'])) {
+
+    $id_sensor = (int) $_POST['id_sensor'];
+
+    $sql = "DELETE FROM sensores WHERE id_sensor = ?";
+
+    $stmt = mysqli_prepare($conexao, $sql);
+
+    if (!$stmt) {
+        die("Erro ao preparar exclusão: " . mysqli_error($conexao));
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $id_sensor);
+
+    if (!mysqli_stmt_execute($stmt)) {
+        die("Erro ao excluir sensor: " . mysqli_stmt_error($stmt));
+    }
+
+    mysqli_stmt_close($stmt);
+
+    header("Location: tela-cadastro-sensores.php");
+    exit;
+}
+
+
+//    CADASTRAR SENSOR
 
 if (isset($_POST['cadastrar'])) {
 
     $nome = $_POST['nome'];
     $categoria = $_POST['categoria'];
     $tipo = $_POST['tipo'];
+    $trilho = $_POST['trilho'];
     $status = $_POST['status'];
 
     $sql = "INSERT INTO sensores
-            (nome_sensor, categoria_sensor, tipo_sensor, status_sensor)
-            VALUES (?, ?, ?, ?)";
+            (
+                nome_sensor,
+                categoria_sensor,
+                tipo_sensor,
+                trilho_sensor,
+                status_sensor
+            )
+            VALUES (?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conexao, $sql);
 
     if (!$stmt) {
-        die("Erro ao preparar o cadastro: " . mysqli_error($conexao));
+        die("Erro ao preparar cadastro: " . mysqli_error($conexao));
     }
 
     mysqli_stmt_bind_param(
         $stmt,
-        "ssss",
+        "sssss",
         $nome,
         $categoria,
         $tipo,
+        $trilho,
         $status
     );
 
@@ -48,9 +81,7 @@ if (isset($_POST['cadastrar'])) {
 }
 
 
-/* ==========================================
-   BUSCAR SENSORES
-========================================== */
+//    BUSCAR SENSORES
 
 $sql = "SELECT * FROM sensores ORDER BY id_sensor DESC";
 
@@ -85,9 +116,7 @@ if (!$resultado) {
 <body>
 
 
-    <!-- ==========================================
-         HEADER
-    =========================================== -->
+         <!-- HEADER -->
 
     <header class="container-fluid p-2 rounded-0"
         style="background-color: #1b3f53; color: #ffffff;">
@@ -119,9 +148,7 @@ if (!$resultado) {
             </div>
 
 
-            <!-- ==========================================
-                 NAVBAR
-            =========================================== -->
+            <!-- NAVBAR -->
 
             <nav class="navbar navbar-expand-lg navbar-dark"
                 style="background-color: #1b3f53;">
@@ -198,12 +225,14 @@ if (!$resultado) {
             </nav>
 
 
-            <!-- BOTÃO SAIR -->
+            <!-- SAIR -->
 
             <div>
+
                 <button class="btn-sair">
                     Sair
                 </button>
+
             </div>
 
         </div>
@@ -211,16 +240,12 @@ if (!$resultado) {
     </header>
 
 
-    <!-- ==========================================
-         CONTEÚDO PRINCIPAL
-    =========================================== -->
+         <!-- CONTEÚDO PRINCIPAL -->
 
     <main class="container-fluid px-4 mt-4">
 
 
-        <!-- ==========================================
-             TÍTULO + BOTÃO NOVO SENSOR
-        =========================================== -->
+        <!-- TÍTULO -->
 
         <div class="d-flex justify-content-between align-items-end mb-4">
 
@@ -257,9 +282,7 @@ if (!$resultado) {
         </div>
 
 
-        <!-- ==========================================
-             FORMULÁRIO DE CADASTRO
-        =========================================== -->
+             <!-- FORMULÁRIO -->
 
         <div class="collapse mb-4"
             id="collapseCadastroSensor">
@@ -267,7 +290,7 @@ if (!$resultado) {
             <div class="card border-0">
 
 
-                <!-- TÍTULO DO FORMULÁRIO -->
+                <!-- CABEÇALHO DO FORM -->
 
                 <div class="cardcadastro p-3">
 
@@ -278,8 +301,6 @@ if (!$resultado) {
                 </div>
 
 
-                <!-- FORM -->
-
                 <form method="POST"
                     class="p-4 bg-white"
                     style="border: 1px solid #BCCCDC; border-top: none;">
@@ -288,13 +309,12 @@ if (!$resultado) {
                     <div class="row g-4">
 
 
-                        <!-- NOME DO SENSOR -->
+                        <!-- NOME -->
 
                         <div class="col-md-6">
 
                             <label for="nomeSensor"
-                                class="form-label"
-                                id="labelsensor">
+                                class="form-label">
 
                                 NOME DO SENSOR
 
@@ -302,8 +322,8 @@ if (!$resultado) {
 
                             <input type="text"
                                 name="nome"
-                                class="form-control"
                                 id="nomeSensor"
+                                class="form-control"
                                 placeholder="Ex: Sensor 01"
                                 required>
 
@@ -322,8 +342,8 @@ if (!$resultado) {
                             </label>
 
                             <select name="categoria"
-                                class="form-select"
                                 id="categoriaSensor"
+                                class="form-select"
                                 required>
 
                                 <option value="">
@@ -355,8 +375,8 @@ if (!$resultado) {
                             </label>
 
                             <select name="tipo"
-                                class="form-select"
                                 id="tipoSensor"
+                                class="form-select"
                                 required>
 
                                 <option value="">
@@ -380,6 +400,27 @@ if (!$resultado) {
                         </div>
 
 
+                        <!-- TRILHO -->
+
+                        <div class="col-md-6">
+
+                            <label for="trilhoSensor"
+                                class="form-label">
+
+                                TRILHO
+
+                            </label>
+
+                            <input type="text"
+                                name="trilho"
+                                id="trilhoSensor"
+                                class="form-control"
+                                placeholder="Ex: TR-01"
+                                required>
+
+                        </div>
+
+
                         <!-- STATUS -->
 
                         <div class="col-md-6">
@@ -392,8 +433,8 @@ if (!$resultado) {
                             </label>
 
                             <select name="status"
-                                class="form-select"
                                 id="statusSensor"
+                                class="form-select"
                                 required>
 
                                 <option value="ATIVO">
@@ -415,9 +456,7 @@ if (!$resultado) {
                     </div>
 
 
-                    <!-- ==========================================
-                         BOTÕES
-                    =========================================== -->
+                    <!-- BOTÕES -->
 
                     <div class="mt-4 d-flex gap-2">
 
@@ -448,17 +487,17 @@ if (!$resultado) {
         </div>
 
 
-             <!-- TABELA DE SENSORES -->
-       
+             <!-- TABELA -->
 
         <div class="d-flex flex-column align-items-center gap-5 w-100"
             style="padding-top: 60px; min-height: 100vh; background-color: #f8f9fa;">
 
+
             <div class="card shadow-sm border-1 p-0"
-                style="width: 900px; border-radius: 4px;">
+                style="width: 1000px; border-radius: 4px;">
 
 
-                <!-- CABEÇALHO -->
+                <!-- TÍTULO DA TABELA -->
 
                 <div class="bg-primary-subtle text-primary-emphasis p-2 border-bottom fw-bold"
                     style="font-size: 0.7rem;">
@@ -491,6 +530,10 @@ if (!$resultado) {
 
                             <th class="fw-semibold">
                                 TIPO
+                            </th>
+
+                            <th class="fw-semibold">
+                                TRILHO
                             </th>
 
                             <th class="fw-semibold">
@@ -572,6 +615,19 @@ if (!$resultado) {
                                     </td>
 
 
+                                    <!-- TRILHO -->
+
+                                    <td class="text-body-tertiary">
+
+                                        <?php
+                                        echo htmlspecialchars(
+                                            $sensor['trilho_sensor']
+                                        );
+                                        ?>
+
+                                    </td>
+
+
                                     <!-- STATUS -->
 
                                     <td>
@@ -581,16 +637,26 @@ if (!$resultado) {
                                         $status = $sensor['status_sensor'];
 
                                         if ($status == 'ATIVO') {
-                                            $classeStatus = 'bg-success-subtle text-success-emphasis border-success-subtle';
+
+                                            $classeStatus =
+                                                'bg-success-subtle text-success-emphasis border-success-subtle';
+
                                         } elseif ($status == 'ALERTA') {
-                                            $classeStatus = 'bg-warning-subtle text-warning-emphasis border-warning-subtle';
+
+                                            $classeStatus =
+                                                'bg-warning-subtle text-warning-emphasis border-warning-subtle';
+
                                         } else {
-                                            $classeStatus = 'bg-secondary-subtle text-secondary-emphasis border-secondary-subtle';
+
+                                            $classeStatus =
+                                                'bg-secondary-subtle text-secondary-emphasis border-secondary-subtle';
+
                                         }
 
                                         ?>
 
-                                        <span class="badge border rounded-1 <?php echo $classeStatus; ?>">
+                                        <span class="badge border rounded-1
+                                            <?php echo $classeStatus; ?>">
 
                                             <?php
                                             echo htmlspecialchars($status);
@@ -601,19 +667,27 @@ if (!$resultado) {
                                     </td>
 
 
-                                    <!-- AÇÕES -->
+                                    <!-- EXCLUIR -->
 
                                     <td class="text-center">
 
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-primary">
-                                            👁️
-                                        </button>
+                                        <form method="POST"
+                                            style="display: inline;"
+                                            onsubmit="return confirm('Tem certeza que deseja excluir este sensor?');">
 
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-danger">
-                                            X
-                                        </button>
+                                            <input type="hidden"
+                                                name="id_sensor"
+                                                value="<?php echo $sensor['id_sensor']; ?>">
+
+                                            <button type="submit"
+                                                name="excluir"
+                                                class="btn btn-sm btn-outline-danger">
+
+                                                X
+
+                                            </button>
+
+                                        </form>
 
                                     </td>
 
@@ -624,11 +698,12 @@ if (!$resultado) {
 
                         <?php } else { ?>
 
-                            <!-- CASO NÃO TENHA SENSORES -->
+
+                            <!-- NENHUM SENSOR -->
 
                             <tr>
 
-                                <td colspan="6"
+                                <td colspan="7"
                                     class="text-center text-muted py-4">
 
                                     Nenhum sensor cadastrado.
@@ -637,8 +712,8 @@ if (!$resultado) {
 
                             </tr>
 
-                        <?php } ?>
 
+                        <?php } ?>
 
                     </tbody>
 
@@ -651,9 +726,7 @@ if (!$resultado) {
     </main>
 
 
-    
-         <!-- BOOTSTRAP JS -->
-   
+    <!-- BOOTSTRAP -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
