@@ -32,32 +32,32 @@
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-cadastro-sensores.html">Sensores</a>
+                                        <a class="nav-link text-white" href="tela-cadastro-sensores.php">Sensores</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-trens.html">Trens</a>
+                                        <a class="nav-link text-white" href="tela-trens.php">Trens</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-cadastro-trilhos.html">Trilhos</a>
+                                        <a class="nav-link text-white" href="tela-cadastro-trilhos.php">Trilhos</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-monitoramento.html">Monitoramento</a>
+                                        <a class="nav-link text-white" href="tela-monitoramento.php">Monitoramento</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-relatorios.html">Relatórios</a>
+                                        <a class="nav-link text-white" href="tela-relatorios.php">Relatórios</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-cadastro-user.html">Usuários</a>
+                                        <a class="nav-link text-white" href="tela-cadastro-user.php">Usuários</a>
                                     </li>
                                 </div>
 
