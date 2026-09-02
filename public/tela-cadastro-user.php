@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_usuario = $_POST['nome_usuario'] ?? '';
     $email_usuario = $_POST['email_usuario'] ?? '';
     $senha = $_POST['senha'] ?? '';
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO usuarios (nome_usuario, email_usuario, senha) VALUES (?, ?, ?)";
     $stmt = mysqli_prepare($conexao, $sql);
@@ -17,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Erro ao preparar a consulta: ' . mysqli_error($conexao));
     }
 
-    mysqli_stmt_bind_param($stmt, 'sss', $nome_usuario, $email_usuario, $senha);
+    mysqli_stmt_bind_param($stmt, 'sss', $nome_usuario, $email_usuario, $senha_hash);
 
     if (mysqli_stmt_execute($stmt)) {
         echo "Usuário cadastrado com sucesso!";
@@ -62,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <ul class="navbar-nav">
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" aria-current="page" href="tela-geral-home.html">Home</a>
+                                        <a class="nav-link text-white" aria-current="page" href="tela-geral-home.php">Home</a>
                                     </li>
                                 </div>
                                 <div>
@@ -72,32 +73,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-cadastro-sensores.html">Sensores</a>
+                                        <a class="nav-link text-white" href="tela-cadastro-sensores.php">Sensores</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Trens</a>
+                                        <a class="nav-link text-white" href="tela-trens.php">Trens</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Trilhos</a>
+                                        <a class="nav-link text-white" href="tela-trilhos.php">Trilhos</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Monitoramento</a>
+                                        <a class="nav-link text-white" href="tela-monitoramento.php">Monitoramento</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="#">Relatórios</a>
+                                        <a class="nav-link text-white" href="tela-relatorios.php">Relatórios</a>
                                     </li>
                                 </div>
                                 <div>
                                     <li class="nav-item">
-                                        <a class="nav-link text-white" href="tela-cadastro-user.html">Usuários</a>
+                                        <a class="nav-link text-white" href="tela-cadastro-user.php">Usuários</a>
                                     </li>
                                 </div>
 
