@@ -6,6 +6,7 @@ CREATE TABLE sensores (
     nome_sensor VARCHAR(100) NOT NULL,
     categoria_sensor VARCHAR(50) NOT NULL,
     tipo_sensor VARCHAR(50) NOT NULL,
+    trilho_sensor VARCHAR(75) NOT NULL,
     status_sensor VARCHAR(20) NOT NULL
 );
 
