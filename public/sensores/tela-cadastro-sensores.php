@@ -190,7 +190,7 @@ if (!$resultado) {
 
                             <li class="nav-item">
                                 <a class="nav-link text-white"
-                                    href="tela-trilhos.php">
+                                    href="tela-cadastro-trilhos.php">
                                     Trilhos
                                 </a>
                             </li>

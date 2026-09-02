@@ -10,6 +10,14 @@ CREATE TABLE sensores (
     status_sensor VARCHAR(20) NOT NULL
 );
 
+CREATE TABLE trilhos (
+    id_trilho INT AUTO_INCREMENT PRIMARY KEY,
+    nome_trilho VARCHAR(100) NOT NULL,
+    descricao_trilho VARCHAR(255) NOT NULL,
+    km_trilho VARCHAR(20) NOT NULL,
+    status_trilho VARCHAR(20) NOT NULL
+);
+
 CREATE TABLE usuarios(
 id_usuario INT AUTO_INCREMENT PRIMARY KEY,
 nome_usuario VARCHAR(200) NOT NULL,
