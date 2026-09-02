@@ -15,3 +15,10 @@ id_usuario INT AUTO_INCREMENT PRIMARY KEY,
 nome_usuario VARCHAR(200) NOT NULL,
 senha VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE trens (
+    id_trem         INT AUTO_INCREMENT PRIMARY KEY,
+    nome_trem       VARCHAR(100)    NOT NULL,
+    carga_trem     VARCHAR(100)    NOT NULL,
+    status_trem     VARCHAR(20)     NOT NULL   
+) 
