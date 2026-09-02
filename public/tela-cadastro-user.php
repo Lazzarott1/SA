@@ -1,3 +1,40 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include '../infra/conexao.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome_usuario = $_POST['nome_usuario'] ?? '';
+    $email_usuario = $_POST['email_usuario'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+
+    $sql = "INSERT INTO usuarios (nome_usuario, email_usuario, senha) VALUES (?, ?, ?)";
+    $stmt = mysqli_prepare($conexao, $sql);
+
+    if ($stmt === false) {
+        die('Erro ao preparar a consulta: ' . mysqli_error($conexao));
+    }
+
+    mysqli_stmt_bind_param($stmt, 'sss', $nome_usuario, $email_usuario, $senha);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "Usuário cadastrado com sucesso!";
+        echo "<br><a href='../index.php'>Voltar</a>";
+        mysqli_stmt_close($stmt);
+        exit();
+    } else {
+        echo "Erro ao cadastrar usuário: " . mysqli_error($conexao);
+    }
+
+    mysqli_stmt_close($stmt);
+}
+?>
+
+
+
+
 <html lang="en">
 
 <head>
@@ -97,7 +134,7 @@
                         EMAIL
                     </label>
 
-                    <input type="email" id="email" class="form-control"
+                    <input type="email" id="email_usuario" name="email_usuario" class="form-control"
                         placeholder="exemplo@123.com" required>
                 </div>
 
@@ -107,7 +144,7 @@
                         NOME DE USUÁRIO
                     </label>
 
-                    <input type="text" id="user" class="form-control"
+                    <input type="text" id="nome_usuario" name="nome_usuario" class="form-control"
                         placeholder="Usuário" required>
                 </div>
 
@@ -117,7 +154,7 @@
                         SENHA
                     </label>
 
-                    <input type="password" id="senha" class="form-control"
+                    <input type="password" id="senha" name="senha" class="form-control"
                         placeholder="Senha" required>
                 </div>
 
@@ -188,7 +225,7 @@
 
 </main>
 
-    <script src="script.js"></script>
+    <script src="../script/validacao_cadastro_user.js"></script>
 
 </body>
 
